@@ -31,4 +31,7 @@ export class ProductService {
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete(url);
   }
+  getProductCount(): Observable<number> {
+    return this.http.get<number>(`${this.baseUrl}/count`);
+  }
 }

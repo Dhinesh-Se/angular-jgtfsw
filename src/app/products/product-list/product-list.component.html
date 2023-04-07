@@ -17,14 +17,16 @@
         <td>{{ product.description }}</td>
         <td style="color: green;">{{ product.price | currency }}</td>
         <td>
-          <a
-            [routerLink]="['/products', product.id]"
-            class="btn btn-primary mr-2"
-            >Edit</a
-          >
-          <button class="btn btn-danger" (click)="deleteProduct(product.id)">
-            Delete
-          </button>
+          <div class="d-flex align-items-center">
+            <a
+              [routerLink]="['/products', product.id]"
+              class="btn btn-primary mr-2"
+              >Edit</a
+            >
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">
+              Delete
+            </button>
+          </div>
         </td>
       </tr>
     </tbody>

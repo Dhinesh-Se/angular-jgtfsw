@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashBoardRouting } from './products/dashboard/dashboard.routing';
 import { ProductFormRouting } from './products/product-form/product-form.routing';
 import { ProductListRouting } from './products/product-list/product-list.routing';
 const routes: Routes = [
@@ -22,6 +23,15 @@ const routes: Routes = [
       {
         path: ':id',
         loadChildren: () => ProductFormRouting
+      }
+    ]
+  },
+  {
+    path:'dashboard',
+    children:[
+      {
+        path:'',
+        loadChildren:() => DashBoardRouting
       }
     ]
   }
