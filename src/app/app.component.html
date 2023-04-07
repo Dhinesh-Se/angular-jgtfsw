@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">My App</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a
+                routerLink="product-list"
+                routerLinkActive="active"
+                class="nav-link"
+                >Products</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container mt-4">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container mt-4">
+        <p>&copy; 2023 My App</p>
+      </div>
+    </footer>
+  </body>
+</html>
