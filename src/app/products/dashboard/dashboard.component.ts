@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductCountComponent } from './product-count.component';
+import { ProductService } from '../product.service';
+
 @Component({
-  standalone:true,
-  imports:[ProductCountComponent],
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  productCount: number;
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.productService.getProductCount().subscribe(count => {
+      this.productCount = count;
+    });
   }
-
 }
